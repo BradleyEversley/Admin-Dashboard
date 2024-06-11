@@ -11,12 +11,15 @@
     grid-template-columns: 20% 80%;
     background-color:rgb(224, 222, 222) ;
 }
+.second-column-main {
+    background: white;
+}
 
 .sub-columns {
     display: grid;
     grid-template-columns: 32% 32% 33%;
     background-color:rgb(224, 222, 222) ;
-    height: 80%;
+    height: 50%;
     border: transparent;
 }
 
@@ -29,8 +32,7 @@
     align-items: center;
     height: 100%;
     background-color: rgb(40, 165, 243);
-    grid-template-columns: 80%;
-    box-shadow: 2px 2px 2px black;
+    grid-template-columns: 100%;
 }
 
 .logo-container {
@@ -92,9 +94,105 @@ a:visited, a:link {
     z-index: 5;
 }
 
+
+.header-bottom {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 50%;
+}
+
+.action-buttons {
+   display: flex;
+   gap: 1rem;
+   margin-right: 20px;
+   padding-top: 20px;
+    align-items:flex-end;
+}
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: rgb(40, 165, 243);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+    cursor: pointer;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+.profile-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 10px 10px 20px;
+    position: absolute;
+    gap: 1rem;
+    border-radius: 0px 25px 25px 0px;
+}
+
+#profile-picture {
+    border-radius: 50%;
+    margin-left: 0px;
+}
+.description {
+    width: 100vw;
+    height: 50px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.description #projects {
+    align-self: flex-end;
+    font-size: 25px;
+}
+
 .main-content1, .main-content2, .activity-bar {
-    height: 65vh;
-    margin: 30px 10px 30px 30px ;
+    margin: 0px 10px 20px 20px ;
+    display: grid;
+    gap: 1rem;
+}
+
+.main-content1 {
+    grid-column-start: 1;
+}
+
+
+.block {
+    border: 6px solid;
+    border-color:rgba(255, 255, 255, 0) rgba(252, 252, 252, 0) rgba(255, 255, 255, 0)  rgb(40, 165, 243);;
+    padding: 15px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
 }
 
 /* ----------------------------------- */
@@ -106,9 +204,10 @@ a:visited, a:link {
 }
 
 .flexbox {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 30%;
     display: flex;
+    flex-direction: column;
     justify-content:flex-start;
   }
   
